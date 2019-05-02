@@ -24,9 +24,15 @@ public class ActivityForm2 extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Open Form1
-                Intent newActivity = new Intent(ActivityForm2.this, MainActivity.class);
-                startActivity(newActivity);
+                //Open Form1  การย้อนกลับไปหน้าที่แล้ว จะไม่ใช้ intent เพราะเป็นการสร้างหน้าใหม่ (มือใหม่บางคนใช้แบบนี้ จะทำให้เกิดหน้าซ้อนๆกัน)
+                //Intent newActivity = new Intent(ActivityForm2.this, MainActivity.class);
+                //startActivity(newActivity);
+
+                //ถ้าจะ back กลับไปหน้าก่อน จะใช้ finish()  หน้านี้ก็จะปิดไป แอนดรอย์จะถอยหลังไปหน้าก่อนนั้นเอง
+                //การสร้าง app ที่มีหลายๆฟอร์ม ควรเขียนผนผังให้เรียบร้อย ว่าปุ่มใดจะใช้ intent ปุ่มใดจะใช้ finish
+                //อ้างอิง http://4.bp.blogspot.com/-gA9PIgvZCMQ/UjLTfn1LA_I/AAAAAAAAYcc/bAe_izZbEkI/s1600/058.png
+
+                finish();
             }
         });
 

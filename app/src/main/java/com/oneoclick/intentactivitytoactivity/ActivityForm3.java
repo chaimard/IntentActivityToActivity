@@ -20,8 +20,11 @@ public class ActivityForm3 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Open Form1
-                Intent newActivity = new Intent(ActivityForm3.this, MainActivity.class);
-                startActivity(newActivity);
+                //Intent newActivity = new Intent(ActivityForm3.this, MainActivity.class);
+                //startActivity(newActivity);
+
+                finish();
+
             }
         });
 
