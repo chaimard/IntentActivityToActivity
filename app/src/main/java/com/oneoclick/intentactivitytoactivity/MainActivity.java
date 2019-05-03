@@ -13,6 +13,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button btnTest;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +48,19 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        matchView();
+
 
     }//void
+
+    private void matchView() {
+        btnTest = (Button) findViewById(R.id.button3);
+    }
+
+    //อย่าลืมสร้าง property onClick ไว้ที่ xml ของปุ่มนี้ด้วย
+    public void goToForm2(View view) {
+        //Open Form2
+        Intent newActivity = new Intent(MainActivity.this, ActivityForm3.class);
+        startActivity(newActivity);
+    }
 }//main
